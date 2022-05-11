@@ -5,6 +5,6 @@ You have to download vagrant box with broken wordpress and fix it whitout re-ins
 Vagrant box:
 https://app.vagrantup.com/TimeS-Dev/boxes/centos7wpse
 
-Edit wp-config.php
-define( 'WP_HOME', 'http://example.com' );
-define( 'WP_SITEURL', 'http://example.com' );
+Edit wp-config.php    
+define( 'WP_HOME', 'http://example.com' );    
+define( 'WP_SITEURL', 'http://example.com' );    
