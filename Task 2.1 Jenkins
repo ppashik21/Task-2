@@ -1,5 +1,6 @@
 1. Установить Jenkins. Это может быть установка на ваш локальный компьютер или на инстансе в облаке, это не имеет значение, 
 как не имеет значение и метод уставки (с использованием docker контейнера, playbook или установка вручную из репзитория и пр.).    
+
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
@@ -8,10 +9,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 
-2. Создать новый проект “Staging”, в нем добавить задачу для сборки простого приложения, например 
-.net: https://github.com/chaitalidey6/HelloWorldAspNetCore/tree/master/HelloWorldAsp
-Java: https://github.com/jenkins-docs/simple-java-maven-app
-Node JS: https://github.com/jenkins-docs/simple-node-js-react-npm-app
+2. Создать новый проект “Staging”, в нем добавить задачу для сборки простого приложения.
 Замечания:
 o Вы можете использовать любое привычное приложение на любом языке 
 (.net, java, js, python, php). 
@@ -29,7 +27,7 @@ o Необходимо самостоятельно подумать над те
 
 https://github.com/ppashik21/test_py
 
-3. Создать задачу в Jenkins /Teamcity для деплоя вашего артифакта на сервер и перезапуск приложения.
+3. Создать задачу в Jenkins для деплоя вашего артифакта на сервер и перезапуск приложения.
 Замечания: 
 o Здесь артефакт может доставляться на удаленный сервер(например,на EC2 инстанс в AWS), либо на контейнер (при работе локально в Docker), 
 либо на локальный сервер (при работе с Vagrant/VirtualBox). 
